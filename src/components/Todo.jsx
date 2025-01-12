@@ -16,6 +16,7 @@ export default function Todo() {
         if (todos.isDone === true) {
             dispatch(markAsDone(id));
         }
+        console.log("Todos state after action:", todos);
     }
     return (
         <>
