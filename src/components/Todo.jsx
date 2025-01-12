@@ -23,7 +23,8 @@ export default function Todo() {
             <h2>Todo List App</h2>
             <ul>
                 {todos.map((todo) => (
-                    <li key={todo.id}>{todo.task} &nbsp;&nbsp;<button onClick={() => clickHandler(todo.id)}>Delete</button>&nbsp;&nbsp;
+                    <li key={todo.id}style={{
+                        textDecoration: todo.isDone ? "line-through" : "none"}}>{todo.task} &nbsp;&nbsp;<button onClick={() => clickHandler(todo.id)}>Delete</button>&nbsp;&nbsp;
                     <button onClick={() => markAsDoneHandler(todo.id)}>Mark As Done</button>
                     </li>
                 ))}
